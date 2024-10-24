@@ -285,3 +285,49 @@ const name = "Johan"{
     }
 }
 ```
+
+### Logical operators
+If you want to compare severall conditiosn at the same time you can use `logical operators`. 
+
+### && - Logical AND 
+Used to check conditions and all of them must be true in order for the entire condition to be true as well.
+
+```js
+const isAnAdult = true
+const isCool = true;
+
+if (isAnAdult && isCool) {
+    console.log("Wow, you are both an adult and cool!") // Will run because all is true. 
+}
+```
+In the above case all the smaller conditions must be true in order for the entire if check to be evaluated to `true`. 
+
+### || Logical OR
+Is used to evalute a if check to true if either one of the "smaller" conditions is true. 
+```js
+const isAnAdult = false
+const isCool = true;
+
+if (isAnAdult || isCool) {
+    console.log("Wow, you are both an adult and cool!") // Will run because one of them is true. 
+}
+```
+
+Remember the conditions is evaluated from left to right. If we have a "||", it only needs to check the first condition if thats true in order to evaluat the entire expression to true.
+
+Same with "&&", left to right. If the first is `true` it must check the second one. If one of them is false it ignore the rest and evaluate everything to `false`
+
+### ! Logical NOT 
+If you put an exclemationmark before and variable or condition it will be inverted. So if oyu write !true, it will be !false. And !false will be !true
+
+```js 
+firstName = ""; 
+if (name){
+    //some code, wont run since it falsy.
+}
+
+if (!name){
+    // this will run because of the exclemationmark inverts the result of the evaluation. 
+}
+```
+
