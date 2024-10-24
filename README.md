@@ -53,5 +53,11 @@ Represents number, both integers and decimal values. Just remember that decimal 
 
 A boolean represent either true or false.
 
-```js
-const 
+### Date
+A date is just a value that represents a date or time.
+
+```js 
+const now = new Date();
+```
+
+This 'new date()' returns a date object that we can manipulate in many ways, and use in our applications.  
