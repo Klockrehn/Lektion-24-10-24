@@ -236,3 +236,52 @@ In the majority of cases, always go for the strict equal comparison.
 ### != -- NOT equal (NOT strict)
 
 ### !== -- NOT equal (AND strict)
+
+### If-else-if statements
+So if we want to do more specific checks it original one was ecaluated `false`, we can always do more if checks or we can chain it in a if-else-if  chain. 
+
+The difference is that if we have a chain of if-else-if, only one of the checks will run, which means, if on of the checks in the chain is true, the rest will be ignored.
+
+If we just do a number of if checks after each other, every if check will still run even though one of them was evaluated to `true`. 
+
+Here is a simple syntax. 
+
+```js 
+const age = 16;
+if (age >= 18) {
+    console.log("Great, you can take your driver's license.")
+} 
+else if (age <= 16>) {
+console.log ("Sorry, you are not old enough for a driver's license, but you can start practising." );
+} 
+else {
+    console.log("Sorry, you will have to take the bike... Or Jerrys biceps");
+}
+```
+
+### Nested if-statements
+
+If you want to do a check that is dependent on another check you can always nest if statements. But beaware, it often leads to messy code that is hard to read. But it's totally fine to do it. 
+
+```js
+if (condition) {
+    if (condition based on earlier condition) {
+        // code to run if nested check is true
+    }
+    // code that always run if original condition is true
+}
+```
+
+Färre indenteringar - lättare att läsa! 
+
+### Truly and falsy values
+
+Sometimes we just want to evaluate variables directly, for instance, we want to see if a variable is defined or not.
+
+```js 
+const name = "Johan"{
+    if (name) {
+        console.log (`Cool name, Mr $ {name}!`);
+    }
+}
+```
