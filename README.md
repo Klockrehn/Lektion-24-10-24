@@ -138,3 +138,101 @@ if(true) {
 }
     console.log(name); // Exists
     console.log(lastName); // Doesn't exist in this scope.
+```
+
+### Let
+
+This is the last key word we can ues in order to create variables. It is very similar to `const` but we are allowed to re-assign a `let`-variable.
+
+```js
+let streetName = "Jerrys Biceps Vägen"; 
+streetName = "Jerrys Biceps Vägen"; // This is totally fine
+```
+
+This is fine, but we can also change the data type if we would like to.
+
+```js 
+let id = "dadadad"; 
+id = "asdf"; // Works just fine, fine datatype doesn't exist. 
+```
+
+Even though this is allowed it's not recommended. Keep it clean, only one data type per variable. 
+
+### If Statements
+
+A `if` statement is just a way for the application to decide which way to go. Simply put. Depending on ceratin condisions that we define, the application can do one thing or the other. Usually an application consists of hundreds of condition in different combinations, so it's a essential/fundamental tool to know about when coding. 
+
+What a statement means is also a good thing to know. It just means a set of instrucions that the computer follows.
+
+### Basic if-syntax
+
+```js 
+
+if(condition) {
+    // code to be executed if the condition is true.
+
+}
+```
+
+`if` is the key word that tells the compiler that an if check is declared. The condition is a value that can be evaluated to either `true` or `false`. The code block contains the code that is execuded when the condition is `true`.
+
+```js 
+const age = 20; 
+
+if (age>18) {
+    console.log("You are an adult");
+}
+``` 
+
+This is fine, if we just want to check if the conditions is `true`, but what if it's `false`, maybe we want to handle that cae as well. Let's look at the `else` key word. 
+
+In this case and example, we want to console.log something, if we are nt above the age of 18.
+
+```js
+const age = 20; 
+
+if (age>18) {
+    console.log("You are an adult"); // If true write this.
+}
+
+else (age<18) {
+    console.log("You are younger then the size of Jerrys biceps.") // If false write this.
+}
+```
+
+This is called an if-else statement. It is very common of course. 
+
+### Comparison operators
+
+In order to evaluate our conditions we need tools for that, and they are called comparison operators. It's the characters that we use to compare the variables or whatever it is we are comparing. 
+
+### >, <, -- greatar than, or less than
+
+Operator to check if something is greater then, or less then. It's very straight forward. 
+
+### >=, <= -- greater than or equal, less than or equal
+
+Same as above but with the added possibility for the "terms". (In lack of a better word), to be equal to eachother
+
+### == -- equal (but NOT strict)
+
+The compare the two things to see if they are equal but no strict equal. It means that we can compare to calues of different data types, and still get a `true`value. This is called equal with cohersion. It means that the editor or browser will try to convert one of the values to the other data type. 
+
+```js 
+"10" == 10 // => Will be true
+"100" == "Hundred" // => Will be false, since they don't have the same kind of value. 
+```
+### === -- equal (AND strict)
+
+Same as above but the values must be of the same data type. 
+
+```js 
+"10" === 10; // Will be false due to different data types. 
+10 === 10; // True.
+```
+
+In the majority of cases, always go for the strict equal comparison. 
+
+### != -- NOT equal (NOT strict)
+
+### !== -- NOT equal (AND strict)
